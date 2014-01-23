@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [[ $# -eq 1 ]]
+then
+    echo '/* -*- mode: promela -*- */' > $1
+else
+    echo '/* -*- mode: promela -*- */'
+fi
+
+exit 0
