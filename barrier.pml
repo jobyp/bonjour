@@ -26,7 +26,7 @@ inline signal(s)
 
 #define p (!(P[0]@c0 && P[1]@c1))
 
-#define N 10
+#define N 3
 
 int mutex = 1;
 int barrier = 0;
@@ -37,7 +37,7 @@ int csp;
 active [N] proctype P()
 {
 
-c0:
+c0: /* Rendezvous */
   skip;
   wait(mutex);
   threads_arrived++;
