@@ -1,0 +1,5 @@
+#!/bin/bash
+spin -a -f '![]p' sem.pml
+gcc -o sem -DSAFETY pan.c
+rm -f pan.*
+exit 0

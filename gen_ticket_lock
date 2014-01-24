@@ -1,0 +1,8 @@
+#!/bin/bash
+spin -a -f '![]p' ticket_lock.pml
+gcc -o ticket_lock -DSAFETY pan.c
+rm -f pan.*
+spin -a ticket_lock.pml
+gcc -o ticket_lock-NP -DNP pan.c
+rm -f pan.*
+exit 0
