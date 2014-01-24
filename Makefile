@@ -11,6 +11,6 @@ all: $(PANs)
 
 .PHONY: clean
 clean:
-	@rm -f *.trail *~ $(PANs)
+	@rm -vf *.trail *~ $(PANs) $(addsuffix -*,$(PANs))
 
 
