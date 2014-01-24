@@ -1,0 +1,11 @@
+#!/bin/bash
+spin -a -f '![]p' rendezvous.pml
+gcc -o rendezvous -DSAFETY pan.c
+rm -f pan.*
+
+# Check for deadlocks
+spin -a rendezvous.pml
+gcc -o rendezvous-deadlock -DSAFETY pan.c
+rm -f pan.*
+
+exit 0
