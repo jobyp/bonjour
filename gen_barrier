@@ -1,0 +1,8 @@
+#!/bin/bash
+spin -a -f '![]p' barrier.pml
+gcc -o barrier -DSAFETY pan.c
+rm -f pan.*
+spin -a barrier.pml
+gcc -o barrier-deadlock pan.c
+rm -f pan.*
+exit 0

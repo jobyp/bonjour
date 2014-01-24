@@ -1,0 +1,5 @@
+#!/bin/bash
+spin -a -f '![]p' mutex.pml
+gcc -o mutex -DSAFETY pan.c
+rm -f pan.*
+exit 0
