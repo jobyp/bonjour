@@ -1,0 +1,8 @@
+#!/bin/bash
+spin -a -f '![]p' reusable_barrier.pml
+gcc -o reusable_barrier -DSAFETY pan.c
+rm -f pan.*
+spin -a reusable_barrier.pml
+gcc -o reusable_barrier-deadlock pan.c
+rm -f pan.*
+exit 0
